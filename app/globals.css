@@ -1,14 +1,18 @@
 @import "tailwindcss";
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  --background-colour: #f3ffc8;
+}
+
+html {
+  background-color: var(--background-colour);
 }
 
 body {
-  color: var(--foreground);
+  background-image:
+    linear-gradient(rgba(128, 128, 128, 0.1) 0.1em, transparent 0.1em),
+    linear-gradient(90deg, rgba(128, 128, 128, 0.1) 0.1em, transparent 0.1em);
+  background-size: 3em 3em;
 }
 
 h1 {
@@ -22,7 +26,7 @@ h2 {
 }
 
 p {
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .subtitle {

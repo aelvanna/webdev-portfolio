@@ -9,7 +9,7 @@ const myFont = localFont({
 import "@/lib/pixel-retroui-setup.js";
 import "./globals.css";
 
-import SideNav from "@/app/ui/navbar";
+import NavBar from "@/app/ui/navbar";
 
 export const metadata = {
   title: "Create Next App",
@@ -25,10 +25,8 @@ export default function RootLayout({
     <html lang="en" className={`${myFont.className} h-full`}>
       <body className="min-h-screen flex flex-col items-center justify-center">
         <div className="flex flex-col items-center">
-          <div className="flex flex-col items-center">
-            <SideNav />
-            {children}
-          </div>
+          <NavBar />
+          {children}
         </div>
       </body>
     </html>

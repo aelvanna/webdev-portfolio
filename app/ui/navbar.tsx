@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Card } from "pixel-retroui";
 
-export default function SideNav() {
+export default function NavBar() {
   return (
     <aside>
       <Card
@@ -11,14 +11,14 @@ export default function SideNav() {
         shadowColor="#fedc34"
         className="md:w-xl lg:w-4xl"
       >
-        <div className="flex flex-row gap-6">
-          <Link href="#" className="text-xl">
+        <div className="flex flex-row gap-6 text-xl underline underline-offset-2">
+          <Link href="#" className="hover:bg-amber-50">
             Home
           </Link>
-          <Link href="#" className="text-xl">
+          <Link href="#" className="hover:bg-amber-50">
             About Me
           </Link>
-          <Link href="#" className="text-xl">
+          <Link href="#" className="hover:bg-amber-50">
             Work
           </Link>
         </div>
