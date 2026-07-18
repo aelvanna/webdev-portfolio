@@ -1,7 +1,15 @@
+import localFont from "next/font/local";
+const myFont = localFont({
+  src: [
+    { path: "./fonts/Minecraft.otf", weight: "400", style: "normal" },
+    { path: "./fonts/Minecraft-Bold.otf", weight: "700", style: "normal" },
+  ],
+});
+
 import "@/lib/pixel-retroui-setup.js";
 import "./globals.css";
 
-import SideNav from "@/app/ui/sidenav";
+import SideNav from "@/app/ui/navbar";
 
 export const metadata = {
   title: "Create Next App",
@@ -14,16 +22,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className="absolute -z-10 inset-0 h-full w-full 
-bg-[linear-gradient(to_right,#73737320_1px,transparent_1px),linear-gradient(to_bottom,#73737320_1px,transparent_1px)] 
-bg-size-[20px_20px] bg-amber-50 antialiased"
-    >
-      <body className="min-h-full flex justify-center items-center">
-        <div className="flex flex-col md:flex-row items-center">
-          <SideNav />
-          {children}
+    <html lang="en" className={`${myFont.className} h-full`}>
+      <body className="min-h-screen flex flex-col items-center justify-center">
+        <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center">
+            <SideNav />
+            {children}
+          </div>
         </div>
       </body>
     </html>
