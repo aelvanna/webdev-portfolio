@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
   --background-colour: #f3ffc8;
@@ -9,21 +9,15 @@ body {
   height: 100%;
 }
 
-html {
+body {
+  margin: 0;
   background-color: var(--background-colour);
-  /* Apply the grid background to the root element so it follows the visual viewport
-     (better behavior in Brave/Chromium when the address bar shows/hides). */
-  min-height: 100vh;
   background-image:
     linear-gradient(rgba(128, 128, 128, 0.1) 0.1em, transparent 0.1em),
     linear-gradient(90deg, rgba(128, 128, 128, 0.1) 0.1em, transparent 0.1em);
   background-size: 3em 3em;
   background-repeat: repeat;
   background-position: 0 0;
-}
-
-body {
-  margin: 0;
 }
 
 h1,
@@ -51,5 +45,9 @@ p {
 }
 
 .navbar {
-  font-family: var(--font-press-start), "Courier New", monospace;
+  font-family: var(--font-press-start), 'Courier New', monospace;
+}
+
+a:hover {
+  background-color: #fffef9;
 }
