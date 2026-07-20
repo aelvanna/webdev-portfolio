@@ -4,7 +4,7 @@ import { Card } from "pixel-retroui";
 export default function NavBar() {
   return (
     <aside>
-      <div className="pt-5 px-5">
+      <div>
         <Card
           bg="#fdff9e"
           textColor="#000000"
@@ -12,13 +12,13 @@ export default function NavBar() {
           shadowColor="#fedc34"
         >
           <div className="flex gap-4 text-md text-center underline underline-offset-2 navbar">
-            <Link href="#" className="hover:bg-amber-50">
+            <Link href="/" className="hover:bg-amber-50">
               Home
             </Link>
-            <Link href="#" className="hover:bg-amber-50">
+            <Link href="/about-me" className="hover:bg-amber-50">
               About Me
             </Link>
-            <Link href="#" className="hover:bg-amber-50">
+            <Link href="/work" className="hover:bg-amber-50">
               Work
             </Link>
           </div>
